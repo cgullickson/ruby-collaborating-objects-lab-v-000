@@ -9,7 +9,7 @@ class Song
   end
 
   def artist_name=(artist_name)
-      @artist = Artist.find_or_create_by_name(name)
+      @artist = Artist.find_or_create_by_name(artist_name)
       artist.add_song(self)
   end
 
@@ -20,7 +20,7 @@ class Song
     new_song = self.new(title)
     binding.pry
     new_song.artist_name = artist_name
-    
+
     new_song
   end
 
